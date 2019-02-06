@@ -273,3 +273,42 @@ Answer:
 Could either of the previous two versions be used to show the price of tickets in different ticket machines? Explain your answer.
 Answer: No, because either of the previous two versions display price as a text/string and does not display the price field value.
 
+### Exercise 2.39 
+Modify the constructor of TicketMachine so that it no longer has a parameter. Instead, the price of tickets should be fixed at 1000 cents. What effect does this have when you construct ticket machine objects within BlueJ?
+Answer: The price is now initiated with a constant of 1000 cents and does not give a user option to enter the ticket price.
+
+### Exercise 2.40 
+Implement a method, empty, that simulates the effect of removing all money from the machine. This method should have a void return type, and its body should simply set the total field to zero. 
+Does this method need to take any parameters? 
+Answer: No, because we are setting the total to a constant of 0.
+
+Test your method by creating a machine, inserting some money, printing some tickets, checking the total, and then emptying the machine. Is this method a mutator or an accessor?
+Answer: This method is a mutator because we have updated/mutated the total field value to a 0.
+    public void empty()
+    {
+        total = 0;
+    }
+
+### Exercise 2.41 
+Implement a method, setPrice, that is able to set the price of tickets to a new value. The new price is passed in as a parameter value to the method. Test your method by creating a machine, showing the price of tickets, changing the price, and then showing the new price. Is this method a mutator?
+Answer: The setPrice method is a mutator.
+    public void setprice(int price)
+    {
+        this.price = price;
+    }
+
+### Exercise 2.42 
+Give the class two constructors. One should take a single parame- ter that specifies the price, and the other should take no parameter and set the price to be a default value of your choosing. Test your implementation by creating machines via the two different constructors.
+Answer:
+public TicketMachine(int tkprice)
+    {
+        this.price = tkprice;
+    }
+    
+   public TicketMachine()
+    {
+        price = 1000;
+        balance = 0;
+        total = 0;
+    }
+
